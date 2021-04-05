@@ -17,6 +17,14 @@ public class RadioService {
     }
 
     public void setCurrentVolume(int currentVolume) {
+        if (currentVolume > maxVolume) {
+            this.currentVolume = maxVolume;
+            return;
+        }
+        if (currentVolume < minVolume) {
+            this.currentVolume = minVolume;
+            return;
+        }
         this.currentVolume = currentVolume;
     }
 
@@ -41,8 +49,15 @@ public class RadioService {
     }
 
     public void setCurrentStation(int currentStation) {
+        if (currentStation > maxStation) {
+            this.currentStation = maxStation;
+            return;
+        }
+        if (currentStation < minStation) {
+            this.currentStation = minStation;
+            return;
+        }
         this.currentStation = currentStation;
-
     }
 
     public void setUpCurrentStation() {
