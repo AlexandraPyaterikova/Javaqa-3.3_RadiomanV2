@@ -1,8 +1,5 @@
 package ru.netology.domain;
 
-import java.io.InputStream;
-import java.util.Scanner;
-
 public class RadioService {
     private int minStation = 0;
     private int maxStation = 9;
